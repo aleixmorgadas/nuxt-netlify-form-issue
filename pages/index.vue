@@ -6,22 +6,13 @@
         nuxt-netlify-form-issue
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <NuxtLink
+          to="/contact"
           class="button--green"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          Contact Form
+        </NuxtLink>
+        <a href="https://twitter.com/aleixmorgadas/status/1365693737515560964" class="button--green" target="__blank">Report of the issue at Twitter</a>
       </div>
     </div>
   </div>
