@@ -151,7 +151,20 @@
         <a href="https://twitter.com/aleixmorgadas" target="__blank">
           <span>Feel free to drop me a</span>
           <span class="text-blue-500 mx-1">tweet</span>
-          <img src="/technologies/twitter.jpg" class="h-5 w-5 inline" />
+          <img src="/twitter.jpg" class="h-5 w-5 inline" />
+        </a>
+      </div>
+      <div class="relative mt-10">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center">
+          <span class="px-2 bg-gray-100 text-sm text-gray-500"> </span>
+        </div>
+      </div>
+      <div class="mt-5 text-yellow-500 flex flex-inline justify-center">
+        <a href="https://aleixmorgadas.dev" target="__blank">
+          <span>Original webpage</span>
         </a>
       </div>
     </div>
@@ -173,11 +186,7 @@ export default {
   },
   computed: {
     completed: function() {
-      return (
-        this.name === "" ||
-        this.message === "" ||
-        !this.agreed
-      );
+      return this.name === "" || this.message === "" || !this.agreed;
     }
   }
 };
