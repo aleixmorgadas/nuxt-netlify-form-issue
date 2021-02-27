@@ -77,39 +77,6 @@
             </div>
           </div>
           <div class="sm:col-span-2">
-            <label for="reason" class="block text-sm font-medium text-gray-700"
-              >Reason</label
-            >
-            <div class="mt-1">
-              <select
-                v-model="reason"
-                id="reason"
-                name="reason"
-                class="focus:ring-yellow-500 focus:border-yellow-500 relative block w-full rounded-md bg-white focus:z-10 sm:text-sm border-gray-300"
-              >
-                <option value="" disabled selected>Select your option</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="sm:col-span-2">
-            <label for="email" class="block text-sm font-medium text-gray-700"
-              >Email</label
-            >
-            <div class="mt-1">
-              <input
-                v-model="email"
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="youremail@thatisnotfake.com"
-                class="py-3 px-4 block w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 border-gray-300 rounded-md"
-              />
-            </div>
-          </div>
-          <div class="sm:col-span-2">
             <label for="message" class="block text-sm font-medium text-gray-700"
               >Message</label
             >
@@ -195,8 +162,6 @@ export default {
   data: function() {
     return {
       name: "",
-      reason: "",
-      email: "",
       message: "",
       agreed: false
     };
@@ -210,8 +175,6 @@ export default {
     completed: function() {
       return (
         this.name === "" ||
-        this.reason === "" ||
-        this.email === "" ||
         this.message === "" ||
         !this.agreed
       );
