@@ -52,8 +52,7 @@
           name="contactme"
           method="POST"
           class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-          action="/success-form"
-          netlify
+          @submit.prevent="onSubmit"
         >
           <p class="hidden">
             <label
@@ -158,6 +157,12 @@
   </div>
 </template>
 <script>
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default {
   data: function() {
     return {
@@ -169,15 +174,26 @@ export default {
   methods: {
     toggleAgree: function() {
       this.agreed = !this.agreed;
+    },
+    onSubmit: function(event) {
+      event.preventDefault();
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          name: this.name,
+          message: this.message,
+          agreed: this.agreed
+        })
+      })
+        .then(() => this.$router.push({ path: "/success-form" }))
+        .catch(error => alert(error));
     }
   },
   computed: {
     completed: function() {
-      return (
-        this.name === "" ||
-        this.message === "" ||
-        !this.agreed
-      );
+      return this.name === "" || this.message === "" || !this.agreed;
     }
   }
 };
