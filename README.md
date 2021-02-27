@@ -4,6 +4,10 @@ I reported the issue at my Twitter. See thread here https://twitter.com/aleixmor
 
 You can see the App running to check the behavior here https://nuxt-netlify-form-issue.netlify.app/
 
+## Solution
+
+See solution at branch solution https://github.com/aleixmorgadas/nuxt-netlify-form-issue/tree/solution
+
 ## Build Setup
 
 ```bash
