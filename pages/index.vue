@@ -12,7 +12,7 @@
         >
           Contact Form
         </NuxtLink>
-        <a href="https://twitter.com/aleixmorgadas/status/1365693737515560964" class="button--green" target="__blank">Report of the issue at Twitter</a>
+        <a href="https://twitter.com/aleixmorgadas/status/1365693737515560964" class="button--grey" target="__blank">Thread of the report of the issue at Twitter</a>
       </div>
     </div>
   </div>
